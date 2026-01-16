@@ -228,7 +228,7 @@ clientD.on("interactionCreate", async (interaction) => {
 			const serverDetailsEmbed = new EmbedBuilder()
 				.setTitle("FIRELOO  //  MINECRAFT SERVER STATUS")
 				.setDescription(
-					`<:cep:1373149617557995600> <t:${Math.round(
+					`<:UWITE:1416165866705260604> <t:${Math.round(
 						Date.now() / 1000
 					)}:R>\n\n:bulb: **STATUS:**\n${statusString}${playersString}\n-# note: the server will automatically start if you join\n\n:jigsaw: **VERSION:**\n${
 						server.software.version
