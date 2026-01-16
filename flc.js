@@ -34,7 +34,9 @@ clientD.once("clientReady", async () => {
 		console.log("\x1b[32mFIRELOO connect is now online!\n");
 		clientD.users.fetch("390612175137406978").then((user) => {
 			user.send(
-				`## <:UWITE:1416165866705260604> FIRELOO connect is now online! <:UWITE:1416165866705260604>\n-# v0.6 @ ${Date.now()} = <t:${Math.round(Date.now() / 1000)}:R>`
+				`## <:ITEUWcircle:1461539681769488587> FIRELOO connect is now online! <:ITEUWcircle:1461539681769488587>\n-# v0.6 @ ${Date.now()} = <t:${Math.round(
+					Date.now() / 1000
+				)}:R>`
 			);
 		});
 
@@ -67,7 +69,7 @@ server.on("status", async (server) => {
 				clientD.channels.cache
 					.get("1421177984047513610")
 					.send(
-						`## <:UWITE:1416165866705260604> Civil Engineers’ Paradise is now online! <:UWITE:1416165866705260604>\n-# someone started the server @ ${Date.now()} = <t:${Math.round(
+						`## <:ITEUWcircle:1461539681769488587> Civil Engineers’ Paradise is now online! <:ITEUWcircle:1461539681769488587>\n-# someone started the server @ ${Date.now()} = <t:${Math.round(
 							Date.now() / 1000
 						)}:R>\n-# use \`/server\` for more information`
 					);
