@@ -1,7 +1,7 @@
 // *** much of this code is copied from Omega Seal ***
 
 // IMPORT THINGS
-const { tokenD, tokenE } = require("./config.json");
+const { tokenD, tokenE, botID } = require("./config.json");
 const { Client: DiscordClient, GatewayIntentBits, ActivityType, InteractionType, MessageFlags, EmbedBuilder, PermissionOverwrites, PermissionsBitField } = require("discord.js");
 const { Client: ExarotonClient } = require("exaroton");
 
@@ -35,8 +35,8 @@ clientD.once("clientReady", async () => {
 		clientD.users.fetch("390612175137406978").then((user) => {
 			user.send(
 				`## <:ITEUWcircle:1461539681769488587> FIRELOO connect is now online! <:ITEUWcircle:1461539681769488587>\n-# v0.6 @ ${Date.now()} = <t:${Math.round(
-					Date.now() / 1000
-				)}:R>`
+					Date.now() / 1000,
+				)}:R>`,
 			);
 		});
 
@@ -70,8 +70,8 @@ server.on("status", async (server) => {
 					.get("1421177984047513610")
 					.send(
 						`## <:ITEUWcircle:1461539681769488587> Civil Engineers’ Paradise is now online! <:ITEUWcircle:1461539681769488587>\n-# someone started the server @ ${Date.now()} = <t:${Math.round(
-							Date.now() / 1000
-						)}:R>\n-# use \`/server\` for more information`
+							Date.now() / 1000,
+						)}:R>\n-# use \`/server\` for more information`,
 					);
 
 				clientD.channels.cache.get("1461424829952426056").permissionOverwrites.edit("1193405156621041664", { SendMessages: true });
@@ -88,7 +88,7 @@ server.on("status", async (server) => {
 			if (server.status == server.STATUS.OFFLINE) {
 				// let account = await clientE.getAccount();
 				await server.setMOTD(
-					`§7welcome to §6FIRELOO§7   < < <   §3${server.software.version}§7 @ §3mc.ite.fyi\n§c☀ §6☀ §e☀ §c☀ §6☀ §e☀ §c☀ §6☀ §e☀ §c☀ §6☀ §e☀ §c☀ §6☀ §e☀ §c☀ §6☀ §e☀`
+					`§7welcome to §6FIRELOO§7   < < <   §3${server.software.version}§7 @ §3mc.ite.fyi\n§c☀ §6☀ §e☀ §c☀ §6☀ §e☀ §c☀ §6☀ §e☀ §c☀ §6☀ §e☀ §c☀ §6☀ §e☀ §c☀ §6☀ §e☀`,
 				);
 
 				/*
@@ -147,7 +147,7 @@ server.on("console:line", async (line) => {
 					.send(
 						`${line
 							.substring(line.indexOf(testString))
-							.replace(testString, `**${testString.substring(1, testString.length - 1)}** <t:${Math.round(Date.now() / 1000)}:R>`)}`
+							.replace(testString, `**${testString.substring(1, testString.length - 1)}** <t:${Math.round(Date.now() / 1000)}:R>`)}`,
 					);
 
 				console.log(`\x1b[36mmessage received from server:\x1b[37m ${line} [${formatDate(new Date())} ${formatTime(new Date())}]`);
@@ -229,16 +229,16 @@ clientD.on("interactionCreate", async (interaction) => {
 				.setTitle("FIRELOO  //  MINECRAFT SERVER STATUS")
 				.setDescription(
 					`<:UWITE:1416165866705260604> <t:${Math.round(
-						Date.now() / 1000
+						Date.now() / 1000,
 					)}:R>\n\n:bulb: **STATUS:**\n${statusString}${playersString}\n-# note: the server will automatically start if you join\n\n:jigsaw: **VERSION:**\n${
 						server.software.version
 					}\n-# the latest version of Minecraft: Java Edition\n\n:incoming_envelope: **IP:**\nmc.ite.fyi\n-# if that doesn’t work, try ${server.address}:${
 						server.port
 					}\n\n:coin: **CREDITS REMAINING:**\n${Math.round(account.credits * 100) / 100} (about ${Math.round(
-						account.credits / serverRAM
+						account.credits / serverRAM,
 					)} hours of server use)\n-# basis for calculation: at ${serverRAM} GB RAM, ${serverRAM} credits are consumed hourly\n\n:scroll: **MESSAGE:**\n\`${server.motd
 						.replaceAll(/§./g, "")
-						.replaceAll(/\n/g, "`\n`")}\`\n-# this is the server’s “MOTD” a.k.a. “message of the day”${playerListString}`
+						.replaceAll(/\n/g, "`\n`")}\`\n-# this is the server’s “MOTD” a.k.a. “message of the day”${playerListString}`,
 				)
 				.setColor("#00aaaa");
 
@@ -255,7 +255,7 @@ clientD.on("interactionCreate", async (interaction) => {
 	if (commandName === "help") {
 		try {
 			await interaction.reply(
-				":printer: **Command syntaxes and descriptions.**\n> `/ping` Latency information.\n> `/start` Start the Minecraft server.\n> `/status` Check the Minecraft server’s status, version, and more.\n> `/help` Learn more about FIRELOO connect’s commands."
+				":printer: **Command syntaxes and descriptions.**\n> `/ping` Latency information.\n> `/start` Start the Minecraft server.\n> `/status` Check the Minecraft server’s status, version, and more.\n> `/help` Learn more about FIRELOO connect’s commands.",
 			);
 
 			logMessage(interaction, `...`);
@@ -276,7 +276,7 @@ clientD.on("messageCreate", async (message) => {
 			server.executeCommand(
 				`tellraw @a ["",{"text":"[","color":"gray"},{"text":"@${name}","color":"gold"},{"text":"]","color":"gray"},{"text":" ${message.content
 					.replaceAll("\\", "\\\\")
-					.replaceAll('"', '\\"')}"}]`
+					.replaceAll('"', '\\"')}"}]`,
 			);
 
 			console.log(`\x1b[36mmessage sent to server:\x1b[37m [@${name}] ${message.content} [${formatDate(new Date())} ${formatTime(new Date())}]`);
