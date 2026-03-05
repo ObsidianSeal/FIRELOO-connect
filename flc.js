@@ -69,7 +69,7 @@ server.on("status", async (server) => {
 				clientD.channels.cache
 					.get("1421177984047513610")
 					.send(
-						`## <:ITEUWcircle:1461539681769488587> Civil Engineers’ Paradise is now online! <:ITEUWcircle:1461539681769488587>\n-# someone started the server @ ${Date.now()} = <t:${Math.round(
+						`## <:ITEUWcircle:1461539681769488587> FIRELOO is now online! <:ITEUWcircle:1461539681769488587>\n-# someone started the server @ ${Date.now()} = <t:${Math.round(
 							Date.now() / 1000,
 						)}:R>\n-# use \`/server\` for more information`,
 					);
