@@ -240,7 +240,7 @@ clientD.on("interactionCreate", async (interaction) => {
 						.replaceAll(/§./g, "")
 						.replaceAll(/\n/g, "`\n`")}\`\n-# this is the server’s “MOTD” a.k.a. “message of the day”${playerListString}`,
 				)
-				.setColor("#00aaaa");
+				.setColor("#00597c");
 
 			await interaction.reply({ embeds: [serverDetailsEmbed] });
 
