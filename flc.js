@@ -264,7 +264,7 @@ clientD.on("interactionCreate", async (interaction) => {
 	if (commandName === "help") {
 		try {
 			await interaction.reply(
-				":printer: **Command syntaxes and descriptions.**\n> `/ping` Latency and network speed details.\n> `/start` Start the Minecraft server.\n> `/status` Check the Minecraft server’s status, version, and more.\n> `/help` Learn more about FIRELOO connect’s commands.",
+				`:printer: **Command syntaxes and descriptions.**\n> \`/ping\` Latency and network speed details.\n> \`/start\` Start the Minecraft server.\n> \`/status\` Check the Minecraft server’s status, version, and more.\n> \`/help\` Learn more about FIRELOO connect’s commands.\n-# <@1461423657208250623> v${VERSION}`,
 			);
 
 			logMessage(interaction, "sent");
