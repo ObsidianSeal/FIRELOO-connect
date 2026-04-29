@@ -1,6 +1,6 @@
 {
 	"name": "fireloo-connect",
-	"version": "0.7",
+	"version": "0.7.1",
 	"author": "Obsidian_Seal",
 	"description": "CEPDBC pseudo-fork for the ITE UW Minecraft Server",
 	"main": "flc.js",
