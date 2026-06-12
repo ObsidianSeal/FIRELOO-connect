@@ -5,7 +5,7 @@
 	"description": "CEPDBC pseudo-fork for the ITE UW Minecraft Server",
 	"main": "flc.js",
 	"dependencies": {
-		"@cloudflare/speedtest": "^1.7.0",
+		"@cloudflare/speedtest": "^1.10.1",
 		"discord.js": "^14.25.1",
 		"exaroton": "^2.0.2"
 	}
