@@ -9,6 +9,15 @@ const { Client: DiscordClient, GatewayIntentBits, ActivityType, InteractionType,
 const { Client: ExarotonClient } = require("exaroton");
 const SpeedTest = require("@cloudflare/speedtest").default;
 
+// (HOPEFULLY TEMPORARY) FIX FOR CLOUDFLARE SPEEDTEST, provided by Gemini
+if (typeof window === "undefined") {
+	global.window = {
+		location: {
+			origin: "https://speed.cloudflare.com",
+		},
+	};
+}
+
 // MAKE THE EXAROTON CLIENT
 const clientE = new ExarotonClient(tokenE);
 
